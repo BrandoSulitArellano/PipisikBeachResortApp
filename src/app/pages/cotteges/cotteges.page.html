@@ -1,0 +1,43 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+
+<ion-header style="background-color: wheat; color: black;">
+  <h1 style="text-align: center; font-family: 'Zen Loop', cursive; font-weight: bold;">COTTEGES/ROOMS</h1>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-fab vertical="top" horizontal="start" edge slot="fixed">
+      <ion-fab-button color="warning">
+        <ion-icon name="chevron-down-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="bottom">
+        <ion-fab-button routerLink="/loginhome"><ion-icon name="home"></ion-icon></ion-fab-button>
+        <ion-fab-button routerLink="/cotteges"><ion-icon name="bed"></ion-icon></ion-fab-button>
+        <ion-fab-button routerLink="/foods"><ion-icon name="restaurant"></ion-icon></ion-fab-button>
+        <ion-fab-button routerLink="/information"><ion-icon name="information"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <ion-list>
+      <ion-item *ngFor = "let cotteges of rooms">
+        <ion-card>
+        <ion-img style="margin-bottom: 3%;" [src]="cotteges.image" class="card-image"></ion-img>
+        <ion-card-header style=" background-color: rgb(255, 202, 104); text-align: center; font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 30px; ">{{cotteges.name + " " + cotteges.price}}</ion-card-header>
+        <ion-card-content style="font-family: 'Zen Loop', cursive; font-size: 25px; padding-top: 5%;">{{cotteges.description + ". The code is " + cotteges.code}}</ion-card-content>
+
+        <div style="text-align: center; margin: 3%;">
+          <!-- <ion-button color="warning" fill="outline" (click)="book()"><ion-icon name="bookmark-outline" slot="start"></ion-icon>BOOK NOW</ion-button> -->
+          <ion-item>
+            <ion-input type = "email" [(ngModel)]="form.answer" placeholder = "Input code here"></ion-input>
+            <ion-button fill="outline" color="warning" expand="block" (click)="book()"><ion-icon name="bookmark-outline"></ion-icon>Book Now</ion-button>
+          </ion-item>
+        </div>
+
+
+      </ion-card>
+      </ion-item>
+    </ion-list>
+  </ion-content>

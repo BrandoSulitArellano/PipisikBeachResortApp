@@ -1,0 +1,7 @@
+{
+  "name": "PipisikApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

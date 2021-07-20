@@ -1,0 +1,68 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+
+<ion-content>
+  <div id="bg">
+
+    <div id="logo-holder">
+      <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0Z0n88J5ACroyXy43R9AABDzx0eL_G3mmA&usqp=CAU">
+    </div>
+
+    <div id="card-holder">
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-label position="floating" style="font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 20px;">Email:</ion-label>
+          <ion-input type = "email" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.email_address"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-label position="floating" style="font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 20px;">Password:</ion-label>
+          <ion-input type = "password" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.password"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-label position="floating" style="font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 20px;">Confirm Password:</ion-label>
+          <ion-input type = "password" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.password1"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-label position="floating" style="font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 20px;">Address:</ion-label>
+          <ion-input type = "text" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.address"></ion-input>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-label position="floating" style="font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 20px;">Contact Number:</ion-label>
+          <ion-input type = "number" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.contactnum"></ion-input>
+        </ion-item>
+      </ion-card>
+
+    </div>
+
+    <div id="button-holder">
+      <ion-button id="button" color="warning" shape="round" (click)="submit()">Submit</ion-button>
+    </div>
+
+    <div id="copyright">
+      <p style="font-size: 15px;">Copyright &copy; 2021</p>
+      <p style="font-size: 13px;">All rights reserved.</p>
+    </div>
+
+
+  </div>
+
+</ion-content>

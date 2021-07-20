@@ -1,0 +1,52 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+
+<ion-header style="background-color: wheat; color: black;">
+    <h1 style="text-align: center; font-family: 'Zen Loop', cursive; font-weight: bold;">BOOKING</h1>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="start" edge slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="chevron-down-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button routerLink="/loginhome"><ion-icon name="home"></ion-icon></ion-fab-button>
+      <ion-fab-button routerLink="/cotteges"><ion-icon name="bed"></ion-icon></ion-fab-button>
+      <ion-fab-button routerLink="/foods"><ion-icon name="restaurant"></ion-icon></ion-fab-button>
+      <ion-fab-button routerLink="/information"><ion-icon name="information"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-card>
+    <ion-img style="margin-bottom: 3%;" src="assets/images/Karla.jpg"></ion-img>
+    <ion-card-header style=" background-color: rgb(255, 202, 104); text-align: center; font-family: 'Zen Loop', cursive; font-weight: bold; font-size: 30px; ">You chose Karla</ion-card-header>
+    <ion-card-content style="text-align: center;">
+
+      <ion-item>
+        <ion-label>Check in date:</ion-label>
+        <ion-datetime [(ngModel)]="startDate" placeholder="Click Here" displayFormat="DDDD MMM D, YYYY" min="2021"></ion-datetime>
+      </ion-item>
+
+      <p style="margin-top: 3%;">Input days of stay:</p>
+
+      <ion-item style="text-align: center;">
+        <ion-input type = "number" [(ngModel)]="araw.days"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" fill="outline" color="warning" (click)="confirm()">CONFIRM</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="padding: 3%;">
+    <h1 style="font-family: 'Zen Loop', cursive; font-weight: bold; text-align: center;">{{ text1 }}</h1>
+    <h1 style="font-family: 'Zen Loop', cursive; font-weight: bold; text-align: center;">{{ text4 }}</h1>
+    <h1 style="font-family: 'Zen Loop', cursive; font-weight: bold; text-align: center;">{{ text3 }}</h1>
+    <h1 style="font-family: 'Zen Loop', cursive; font-weight: bold; text-align: center;">{{ text5 }}</h1>
+    <h1 style="font-family: 'Zen Loop', cursive; font-weight: bold; text-align: center;">{{ text2 }}</h1>
+  </ion-card>
+
+</ion-content>

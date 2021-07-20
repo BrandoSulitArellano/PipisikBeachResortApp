@@ -1,0 +1,42 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+
+<ion-content>
+
+  <div id="bg">
+
+    <div id="logo-holder">
+      <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0Z0n88J5ACroyXy43R9AABDzx0eL_G3mmA&usqp=CAU">
+    </div>
+
+    <div id="card-holder">
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-input type = "email" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.email_address" placeholder = "Email:"></ion-input>
+        </ion-item>
+        </ion-card>
+
+      <ion-card class="cards">
+        <ion-item>
+          <ion-input type = "password" style="font-family: 'Zen Loop', cursive; font-size: 20px; font-weight: bold;
+          " [(ngModel)]="form.password" placeholder = "Password"></ion-input>
+        </ion-item>
+      </ion-card>
+
+    </div>
+
+    <div id="button-holder">
+      <ion-button id="button" color="warning" shape="round" (click)="print()">Login</ion-button>
+    </div>
+
+    <div id="copyright">
+      <p style="font-size: 15px;">Copyright &copy; 2021</p>
+      <p style="font-size: 13px;">All rights reserved.</p>
+    </div>
+
+  </div>
+
+</ion-content>
